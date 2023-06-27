@@ -1,3 +1,6 @@
-<app-cv-header></app-cv-header>
-<app-cv-body></app-cv-body>
-<app-cv-footer></app-cv-footer>
+<ng-template #appTemplate let-data="data">
+	<app-header [data] = "data"></app-header>
+	<app-body [data]="data"></app-body>
+	<app-footer [data]="data"></app-footer>
+</ng-template>
+<ng-container *ngTemplateOutlet = "appTemplate, context: { data: data$ | async }"></ng-container>
