@@ -1,5 +1,5 @@
-import { TestBed } from '@angular/core/testing';
-import { DataExportService } from './data-export.service';
+import {TestBed} from '@angular/core/testing';
+import {DataExportService} from './data-export.service';
 
 describe('DataExportService', () => {
   let service: DataExportService;
