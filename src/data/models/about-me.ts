@@ -11,4 +11,5 @@ export interface AboutMe {
     careerSummary: string[];
     workEmail: string;
     mobileNumber: string;
+    currentLocation: string;
 }
