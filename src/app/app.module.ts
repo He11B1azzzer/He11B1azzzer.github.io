@@ -11,6 +11,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatCardModule} from "@angular/material/card";
+import {CardComponent} from './card/card.component';
+import {MatListModule} from "@angular/material/list";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
     declarations: [
@@ -18,6 +21,7 @@ import {MatCardModule} from "@angular/material/card";
         HeaderComponent,
         FooterComponent,
         BodyComponent,
+        CardComponent,
     ],
     imports: [
         BrowserModule,
@@ -27,7 +31,9 @@ import {MatCardModule} from "@angular/material/card";
         MatIconModule,
         MatInputModule,
         MatExpansionModule,
-        MatCardModule
+        MatCardModule,
+        MatListModule,
+        MatButtonModule
     ],
     providers: [],
     bootstrap: [AppComponent]
