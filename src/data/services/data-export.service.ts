@@ -6,7 +6,7 @@ import {Data} from "../models/data";
 @Injectable()
 export class DataExportService {
     private readonly data$ = this.httpClient.get<Data>('../assets/data.json');
-    private readonly professionalProfile$ =this.httpClient.get('../assets/professional-profile.txt', {responseType: 'text'});
+    private readonly professionalProfile$ = this.httpClient.get('../assets/professional-profile.txt', {responseType: 'text'});
     private readonly coreSkills$ = this.httpClient.get('../assets/core-skills.txt', {responseType: 'text'});
 
     constructor(private readonly httpClient: HttpClient) {}
