@@ -14,8 +14,26 @@
 					</ng-container>
 				</div>
 			</app-card>
-			<app-card title = "Career summary"></app-card>
-			<app-card title = "Education"></app-card>
+			<app-card title = "Career summary">
+				<div class = "row">
+					<ng-container
+						*ngFor = "let checkpoint of data?.aboutMe?.careerSummary">
+						<div class = "col-md-12">
+							<span> - {{checkpoint}}</span>
+						</div>
+					</ng-container>
+				</div>
+			</app-card>
+			<app-card title = "Education">
+				<div class = "row">
+					<ng-container
+						*ngFor = "let education of data?.aboutMe?.education">
+						<div class = "col-md-12">
+							<span> - {{education}}</span>
+						</div>
+					</ng-container>
+				</div>
+			</app-card>
 		</div>
 	</div>
 </div>

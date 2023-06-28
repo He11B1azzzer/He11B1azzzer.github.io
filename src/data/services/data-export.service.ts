@@ -8,6 +8,8 @@ export class DataExportService {
     private readonly data$ = this.httpClient.get<Data>('../assets/data.json');
     private readonly professionalProfile$ = this.httpClient.get('../assets/professional-profile.txt', {responseType: 'text'});
     private readonly coreSkills$ = this.httpClient.get('../assets/core-skills.txt', {responseType: 'text'});
+    private readonly careerSummary$ = this.httpClient.get('../assets/career-summary.txt', {responseType: 'text'});
+    private readonly education$ = this.httpClient.get('../assets/education.txt', {responseType: 'text'});
 
     constructor(private readonly httpClient: HttpClient) {}
 
@@ -15,10 +17,14 @@ export class DataExportService {
         return forkJoin([
             this.data$,
             this.professionalProfile$,
-            this.coreSkills$
-        ]).pipe(map(([data, profileTxt, coreSkills]) => {
+            this.coreSkills$,
+            this.careerSummary$,
+            this.education$
+        ]).pipe(map(([data, profileTxt, coreSkills, careerSummary, education]) => {
             data.aboutMe.professionalProfile = profileTxt;
             data.aboutMe.coreSkills = coreSkills.split('\n').filter(Boolean);
+            data.aboutMe.careerSummary = careerSummary.split('\n').filter(Boolean);
+            data.aboutMe.education = education.split('\n').filter(Boolean);
             return data;
         }));
     }
