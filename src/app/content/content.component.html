@@ -1,0 +1,22 @@
+<div class = "container-fluid">
+	<div class = "row">
+		<div class = "col-12">
+			<app-card title = "Professional profile">
+				<p>{{data?.aboutMe?.professionalProfile}}</p>
+			</app-card>
+			<app-card title = "Core skills">
+				<div class = "row">
+					<ng-container
+						*ngFor = "let skill of data?.aboutMe?.coreSkills">
+						<div class = "col-md-6">
+							<span> - {{skill}}</span>
+						</div>
+					</ng-container>
+				</div>
+			</app-card>
+			<app-card title = "Career summary"></app-card>
+			<app-card title = "Education"></app-card>
+		</div>
+	</div>
+</div>
+

@@ -6,7 +6,6 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {DataModule} from "../data/data.module";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {BodyComponent} from './body/body.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatExpansionModule} from "@angular/material/expansion";
@@ -14,13 +13,14 @@ import {MatCardModule} from "@angular/material/card";
 import {CardComponent} from './card/card.component';
 import {MatListModule} from "@angular/material/list";
 import {MatButtonModule} from "@angular/material/button";
+import {ContentComponent} from "./content/content.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        BodyComponent,
+        ContentComponent,
         CardComponent,
     ],
     imports: [
