@@ -4,5 +4,9 @@
 	</mat-toolbar-row>
 	<mat-toolbar-row>
 		<span class="font-16px">{{data?.aboutMe?.title}}</span>
+		<span class="horizontal-spacer"></span>
+		<mat-slide-toggle
+			(change)="onChange($event)"
+			[checked]="darkModeSubject | async"></mat-slide-toggle>
 	</mat-toolbar-row>
 </mat-toolbar>

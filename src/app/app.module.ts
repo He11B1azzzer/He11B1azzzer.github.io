@@ -6,14 +6,14 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {DataModule} from "../data/data.module";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatIconModule} from "@angular/material/icon";
-import {MatInputModule} from "@angular/material/input";
-import {MatExpansionModule} from "@angular/material/expansion";
 import {MatCardModule} from "@angular/material/card";
 import {CardComponent} from './card/card.component';
-import {MatListModule} from "@angular/material/list";
-import {MatButtonModule} from "@angular/material/button";
 import {ContentComponent} from "./content/content.component";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatIconModule} from "@angular/material/icon";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatSelectModule} from "@angular/material/select";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -28,12 +28,12 @@ import {ContentComponent} from "./content/content.component";
         BrowserAnimationsModule,
         DataModule,
         MatToolbarModule,
-        MatIconModule,
-        MatInputModule,
-        MatExpansionModule,
         MatCardModule,
-        MatListModule,
-        MatButtonModule
+        MatSlideToggleModule,
+        MatIconModule,
+        MatDividerModule,
+        MatSelectModule,
+        ReactiveFormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
