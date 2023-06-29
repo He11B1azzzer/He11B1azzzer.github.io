@@ -1,6 +1,6 @@
-<ng-template #appTemplate let-data="data">
-	<app-header [data] = "data" class="header"></app-header>
-	<app-content [data]="data" class="content"></app-content>
-	<app-footer [data]="data" class="footer"></app-footer>
+<ng-template #appTemplate let-data = "data">
+		<app-header [data] = "data" [darkModeSubject]="darkModeSubject" class = "header"></app-header>
+		<app-content [data] = "data" class = "content"></app-content>
+		<app-footer [data] = "data" class = "footer"></app-footer>
 </ng-template>
 <ng-container *ngTemplateOutlet = "appTemplate, context: { data: data$ | async }"></ng-container>
