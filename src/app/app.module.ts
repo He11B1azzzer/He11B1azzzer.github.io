@@ -8,7 +8,6 @@ import {DataModule} from "../data/data.module";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {CardComponent} from './card/card.component';
-import {ContentComponent} from "./content/content.component";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatIconModule} from "@angular/material/icon";
 import {MatDividerModule} from "@angular/material/divider";
@@ -16,14 +15,20 @@ import {MatSelectModule} from "@angular/material/select";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
+import { ProjectsComponent } from './projects/projects.component';
+import { CertificationsComponent } from './certifications/certifications.component';
+import {AboutMeComponent} from "./about-me/about-me.component";
+import {appRoutes} from "./app-routing.module";
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        ContentComponent,
+        AboutMeComponent,
         CardComponent,
+        ProjectsComponent,
+        CertificationsComponent,
     ],
     imports: [
         BrowserModule,
@@ -37,7 +42,8 @@ import {MatMenuModule} from "@angular/material/menu";
         MatSelectModule,
         ReactiveFormsModule,
         MatButtonModule,
-        MatMenuModule
+        MatMenuModule,
+        appRoutes
     ],
     providers: [],
     bootstrap: [AppComponent]

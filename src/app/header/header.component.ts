@@ -11,7 +11,7 @@ import {BehaviorSubject} from "rxjs";
 export class HeaderComponent extends AppBase {
   @Input() public darkModeSubject!: BehaviorSubject<boolean>;
 
-  public onChange($event: MatSlideToggleChange) {
+  public onDarkModeToggle($event: MatSlideToggleChange) {
     this.darkModeSubject?.next($event.checked);
   }
 }

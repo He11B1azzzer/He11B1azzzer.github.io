@@ -1,7 +1,8 @@
 import {Component, Inject, OnInit, Renderer2} from '@angular/core';
-import {DataExportService} from "../data";
+import {Data, DataExportService} from "../data";
 import {BehaviorSubject, tap} from "rxjs";
 import {DOCUMENT} from "@angular/common";
+import {AppBase} from "./app-base";
 
 @Component({
   selector: 'app-root',
@@ -20,5 +21,9 @@ export class AppComponent implements OnInit {
     this.darkModeSubject.pipe(tap((value) => {
       this.renderer.setAttribute(this.document.body, 'class', value ? 'theme-dark' : 'theme-light')
     })).subscribe();
+  }
+
+  public onOutletLoaded(contentComponent: AppBase, data: Data) {
+    contentComponent.data = data;
   }
 }

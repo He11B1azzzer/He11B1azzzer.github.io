@@ -3,8 +3,8 @@ import {AppBase} from "../app-base";
 
 @Component({
     selector: 'app-content',
-    templateUrl: './content.component.html',
+    templateUrl: './about-me.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContentComponent extends AppBase {
+export class AboutMeComponent extends AppBase {
 }
