@@ -1,6 +1,10 @@
 <mat-toolbar color="primary" class="header">
 	<mat-toolbar-row>
 		<span class="font-24px">{{data?.aboutMe?.firstName}} {{data?.aboutMe?.lastName}}</span>
+		<span class="horizontal-spacer"></span>
+		<button mat-icon-button [matMenuTriggerFor]="matMenu">
+			<mat-icon>menu</mat-icon>
+		</button>
 	</mat-toolbar-row>
 	<mat-toolbar-row>
 		<span class="font-16px">{{data?.aboutMe?.title}}</span>
@@ -10,3 +14,9 @@
 			[checked]="darkModeSubject | async"></mat-slide-toggle>
 	</mat-toolbar-row>
 </mat-toolbar>
+
+<mat-menu #matMenu="matMenu">
+	<button mat-menu-item>About me</button>
+	<button mat-menu-item>Projects</button>
+	<button mat-menu-item>Certifications</button>
+</mat-menu>

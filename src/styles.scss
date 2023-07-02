@@ -73,6 +73,10 @@ body {
   overflow: hidden;
 }
 
+button:focus {
+  outline: none !important;
+}
+
 .horizontal-spacer {
   flex: 1 1 auto;
 }
